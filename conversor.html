@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Conversor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="conversor.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+
+    <style>
+        .linha1 {
+            background-color: rgb(154, 137, 167);
+            height: 100px;
+        }
+
+        h1 {
+            padding: 10px;
+            position: relative;
+            color: white;
+            font: 60px sans-serif;
+        }
+
+        body {
+            background-color: rgb(234, 234, 238);
+        }
+        .style-text-calc{
+            background-color: rgb(209, 203, 203);
+            height: 150px;
+            text-align: center;
+            padding: 40px;
+                       
+        }
+        .btn{
+            position: relative;
+            left: 110px;
+            background-color: rgb(154, 137, 167);
+            color: white;
+            font: 15px Arial;
+            height: 45px;
+            border-radius: 10px;
+            border: 1px solid rgb(154, 137, 167);
+        }
+        .col{
+            border-radius: 10px;
+        }
+        .row{
+            padding: 20px;
+            
+        }
+        .row-row{
+            background-color: rgb(175, 166, 177);
+        }
+        .row-row1{
+            background-color: rgb(231, 226, 226);
+            top: 20px;
+            position: relative;
+        }
+        .penultimo{
+            background-color: rgb(231, 226, 226);
+            border-radius: 5px;
+            position: relative;
+            top: 20px;
+            height: 100px;
+        }
+        .ultimo{
+            background-color: rgb(189, 183, 183);
+            border-radius: 5px;
+            height: 40px;
+        }
+        model{
+           top: 10px;
+           position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <form action="acao.php" target="_blanck" method="GET"></form>
+        <div class="row linha1">
+            <div class="col-md-12 col-sm-12">
+                <h1>Conversor de Moeda</h1>
+            </div>
+        </div>
+
+        <div class="row justify-content-ground">
+            <div class="col-md-4"><input class="col" type="text" name="valor" id="num" placeholder="Digite o valor"></div>
+            <div class="col-md-4">
+                <select class="col" id="conv">
+                    <option value="operação">--Selecione uma operação</option>
+                    <option value="1">Dólar</option>
+                    <option value="2">Euro</option>
+                    <option value="3">Peso Argentina</option>
+                    <option value="4">Iene Japão</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row-row"><div class="col-md-12"></div></div>
+
+        <div class="row justify-content-end">
+            <div class="col-md-2">
+                <button class="btn" type="button" onclick="converta()">Calcular</button>
+            </div>
+        </div>
+
+        <div class="row-row"><div class="col-md-12"></div></div>
+
+        <div class="row">
+            <div class="col-md penultimo">
+                <model>Resultado:</model>
+                <div class="row">
+                    <input class="col-md-12 col-sm-12 ultimo" type="text" name="resultado" id="resul"
+                        placeholder="resultado.....">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    </div>
+</body>
+
+</html>

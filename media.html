@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Média</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="media.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/popper.min.js"></script>
+
+    <!--Estilo das colunas-->
+    <style>
+        .btn{
+            top: 10px;
+            position: relative;
+            left: 110px;
+            background-color: darkgreen;
+            color: white;
+            font: 15px Arial;
+            height: 45px;
+            border-radius: 10px;
+            border: 1px solid darkgreen;
+        }
+        .container{
+            border: 3px solid rgb(152, 178, 238);
+            padding: 10px;
+            height: 300px;
+        }
+        .col{
+            border-radius: 5px;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form action="acao.php" target="_blanck" method="GET">
+
+            <div class="row">
+                <div class="col-md-4">
+                    <label>Valor 01</label> 
+                    <input class="col" type="text" name="valor3" placeholder="Digite o primeiro valor" id="v1">
+                </div>
+                <div class="col-md-4">
+                    <label>Valor 02</label>
+                    <input class="col" type="text" name="valor2" placeholder="Digite o segundo valor" id="v2">
+                </div>
+                <div class="col-md-4">
+                    <label>Valor 03</label>
+                    <input class="col" type="text" name="valor3" placeholder="Digite o terceiro valor" id="v3">
+                </div>
+            </div>
+            <br>
+            <div class="row justify-content-center">
+                <div class="col-md-4">
+                    <label>Média</label>
+                    <input class="col" type="text" name="media" id="resultado" placeholder="resultado.....">
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-md-4">
+                    <button class="btn" type="button" onclick="calculaMedia()">Calcula Média</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>
