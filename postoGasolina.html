@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    /* 1 - Um posto está vendendo combustíveis com a seguinte
+    tabela de descontos:
+
+        Alcool: ate 20 lts, desconto 3% litro / acima 20 lts, desconto 5% litro
+        Gasolina: ate 20 lts, desconto 4% litro / acima 20 lts, desconto 6% litro
+
+    Escreva um algoritmo que leia o número de litros vendidos
+
+    e o tipo de combustível (codificado da seguinte forma: A-
+    álcool, G-gasolina), calcule e imprima o valor a ser pago pelo
+
+    cliente sabendo-se que o preço do litro da gasolina é R$
+    3,30 e o preço do litro do álcool é R$ 2,90
+    */
+    
+    var var_comb = prompt("Digite a para alcool e g para gasolina")
+    var var_lit = Number(prompt("Digite a quantidade de litros:"))
+    
+    function preco_comb(combustivel,litros){
+        var preco = 0
+        if (combustivel="g"){
+            if (litros<=20){
+                preco=(3.30*litros)-(preco*0.04)
+            } else {
+                preco = (3.30*litros)-(preco*0.06)
+            }
+        } else if (combustivel="a"){
+            if(combustivel<=20){
+                preco=(2.90*litros)-(preco*0.03)
+            }
+            else{
+            preco=(2.90*litros)-(preco*0.05)
+        }
+        }
+        var preco
+        return preco
+    } 
+        alert(preco_comb(var_comb,var_lit))
+            
+    
+    </script>
+</body>
+</html>

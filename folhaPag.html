@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+    /* Passo 01 - Criar um algoritmo onde entre com o nome do funcionário em
+    uma variável simples, Crie uma função que receba valores
+    correspondentes a folha de pagamento deste funcionário por parâmetros :
+    valor do salário bruto, valor do salário família, auxilio escola e auxilio
+    farmácia e retorne o valor total.
+
+     */
+    
+    var func = prompt("Folha de Pagamento \n\nNome funcionário: ")
+    var salario = Number(prompt("Folha de Pagamento \n\nSalario: "))
+    var salFamilia = Number(prompt("Folha de Pagamento \n\nSalário familia: "))
+    var auxEscola = Number(prompt("Folha de Pagamento \n\nAuxilio Escola: "))
+    var auxFarm = Number(prompt("Folha de Pagamento \n\nAuxilio Farmárcia: "))
+    
+
+    function folha(par1,par2,par3,par4){
+        var bruto = par1+par2+par3+par4
+       
+       return bruto
+       
+    }
+    
+    var totalBruto = folha(salario,salFamilia,auxEscola,auxFarm)
+    
+
+    /* Passo 02 - Criar uma função onde receba por passagem de parâmetro o
+    valor total da função anterior e faça as seguintes deduções: 11% de INSS,
+    6% de VT, no caso do imposto de renda devemos seguir essas regras: até
+    R$ 2499,99 será isento e de 15% caso o valor total seja superior ou igual a
+    R$ 2500,00 acima de R$ 5000 o desconto é de 27,5%. Mostrar na tela o
+    nome do funcionário e valor do salário liquido. */
+
+        
+
+    function desc(salario){
+        var inss = salario * 0.11
+        var vt = salario * 0.06
+        var desc = inss + vt;
+
+        if(salario >= 2500 && salario <= 5000){
+          //var desc = salario-(salario*0.15)
+          alert("Salário Bruto: R$ " + (salario-desc-(salario*0.15)))
+        }
+        else if(salario>5000){
+         //var desc = salario-(salario*0.275)
+            alert("Salário Bruto: R$ " + (salario-desc-(salario*0.275)))
+        }
+        else{
+           
+           alert("Salário Bruto: R$ " + (salario - desc))
+        }    
+        
+        //var res = salario - inss - vt
+        //return res
+    }
+    desc(totalBruto)
+    
+    
+
+
+    </script>
+</body>
+</html>
